@@ -1,0 +1,1001 @@
+/* **
+TB Mega Menu does not support custom break points.
+To prevent premature switching to toggle, the following 
+files were modified in the module's CSS directory.
+768px was added anywhere 979px appeared as min-width.
+
+bootstrap.css
+default.css
+base.css
+
+The javascript also needed to be modified, changing
+980 to 769 in tb-megamenu-frontend.js
+
+Future releases of the TB Mega Menu may enable
+custom breakpoints. Until then, each subsequent release
+will need to be hacked.
+
+See for more info: https://www.drupal.org/node/2050431
+
+**
+   ================================================== */
+
+@font-face {
+  font-family: 'sanchezregular';
+  src: url('fonts/sanchez/sanchez-regular-webfont.eot');
+  src: url('fonts/sanchez/sanchez-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/sanchez/sanchez-regular-webfont.woff2') format('woff2'), url('fonts/sanchez/sanchez-regular-webfont.woff') format('woff'), url('fonts/sanchez/sanchez-regular-webfont.ttf') format('truetype'), url('fonts/sanchez/sanchez-regular-webfont.svg#sanchezregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* * Mega Menu style *
+   ================================================== */
+
+.nav-collapse.tb-mega-collapse.collapse.in {
+  margin: 0
+}
+
+ul.tb-megamenu-nav {
+  display: table;
+  width: 100%;
+}
+
+li.tb-megamenu-item.level-1 {
+  display: table-cell;
+  text-align: center;
+  float: none;
+}
+
+.tb-megamenu .nav > li > a {
+  color: #fff;
+  background-color: #0000;
+  font-size: 16px;
+  font-family: 'sanchezregular',serif;
+  font-weight: 700;
+  border: 0;
+  padding: 15px;
+}
+
+ul.mega-nav.level-1 > li:first-child:not(.no-head) > a {
+  color: #333
+}
+
+.tb-megamenu .dropdown-menu li > a {
+  color: #cc0000;
+  border: none;
+}
+
+.tb-megamenu .nav > .active > a,
+.tb-megamenu .nav > .active > a:hover,
+.tb-megamenu .nav > .active > a:focus {
+  background-color: #000
+}
+
+.tb-megamenu .nav > li > a:focus,
+.tb-megamenu .nav > li > a:hover,
+.tb-megamenu .nav li.dropdown.open > .dropdown-toggle,
+.btn-link,
+.pagination > li > a,
+.pagination > li > a:hover {
+  color: #333
+}
+
+.tb-megamenu .dropdown-menu {
+  opacity: .9;
+  padding: 1em;
+  border: 0px;
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  border-radius: 4px;
+  background-clip: padding-box;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.navbar-nav a {
+  color: #222
+}
+
+a.mega-group-title {
+  font-family: 'sanchezregular',serif;
+  text-transform: capitalize !important;
+  font-size: 1em;
+}
+
+.tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
+.tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #000;
+  color: #fff;
+}
+
+.tb-megamenu .nav > li.dropdown.open.active > a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ===[ Enforces a width for collection link menu items ]=== */
+
+.collection_home {
+  width: 35%
+}
+
+/* ===[ Resize slideshow image width to fill container ]=== */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ===[ Remove navbar background and border ]=== */
+
+.navbar-default {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/* ===[ Sidebar menu styling ]=== */
+
+.region-sidebar-first > section > ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.region-sidebar-first > section > ul > li > a {
+  background-color: #cc0000;
+  color: #fff;
+  margin-bottom: 2px;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  font-family: 'sanchezregular',serif;
+  font-weight: 700;
+}
+
+li.expanded.dropdown > ul {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li.expanded.dropdown > ul > li {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  border: 1px solid #DDD;
+}
+
+.navbar-right {
+  padding-right: 15px
+}
+
+#logo {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+/* ===[ Change button background from blue ]=== */
+
+.pagination > .active > span {
+  background-color: #cc0000;
+  border-color: #cc0000;
+}
+
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #ac0000;
+  border-color: #ac0000;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #333 !important;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 2px;
+  border-color: #333 !important;
+  border: 1px solid transparent;
+}
+
+.form-item-islandora-simple-search-query {
+  padding: 6px 9px
+}
+
+/* ===[ Fixes margins and padding between header and navbar ]=== */
+
+/* ===[ Aligns search box correctly ]=== */
+
+header#navbar,
+.navbar-collapse.collapse {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.news-date {
+  color: #cc0000;
+  font-weight: 700;
+}
+
+/* ===[ Increase max-width of navbar so that it is equal to max-width of main-container ]=== */
+
+@media screen and (min-width: 1200px) { 
+    .navbar.container {
+      max-width: 1170px
+    }
+}
+
+#collapse-search {
+  float: right;
+  margin-right: 1em;
+}
+
+.sf-links {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
+header#header {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ===[ Fixes a problem with the IA bookviewer, which causes the right page arrow to appear beneath viewer ]=== */
+
+div#BRpage {
+  padding: 0
+}
+
+#mini-panel-front h2,
+#mini-panel-alternative_front h2 {
+  background-color: #222;
+  color: #fff;
+  display: block;
+  padding: .5em .5em;
+  font-size: 1.35em;
+  font-family: 'sanchezregular',serif;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+h2.block-title {
+  display: block;
+  padding: .5em .5em;
+  font-size: 1.35em;
+  font-family: 'sanchezregular',serif;
+  font-weight: bold;
+  line-height: 1.1;
+  border-bottom: 1px solid #ccc;
+}
+
+/* ===[ Start styling ]=== */
+
+body {
+  background-color: #ededed
+}
+
+.main-container {
+  background-color: #fff;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 60px;
+}
+
+article {
+  padding: 40px;
+}
+
+#book-viewer,
+.niu-artfl-object,
+.islandora,
+.block-islandora-blocks {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#islandora-solr-top {
+  margin-top: 15px
+}
+
+.islandora-solr-facet-wrapper > h3, #block-islandora-solr-current-query h3 {
+  font-family: 'sanchezregular',serif;
+  font-size: 1.35em;
+  border-bottom: 1px solid #ccc;
+  padding: .5em .5em;
+}
+
+.islandora-solr-facet-pages-wrapper {
+  padding: 15px
+}
+
+.islandora-book-metadata {
+  padding-bottom: 15px
+}
+
+a,
+a:hover,
+a:focus {
+  color: #cc0000
+}
+
+li.tb-megamenu-item.level-1.mega.niudl_home_link {
+  float: right
+}
+
+/* ===[ Fix spacing in facets ]=== */
+
+.plusminus {
+  float: none
+}
+
+.block ul.islandora-solr-facet {
+  padding: 0
+}
+
+.islandora-solr-facet > li {
+  list-style: none
+}
+
+ul.islandora-solr-filter-list.filter-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.favicons {
+  text-align: center
+}
+
+.favicons a {
+  margin: 0 3px
+}
+
+/* ===[ Displays Font Awesome icons in-line ]=== */
+
+.tb-megamenu .dropdown-menu a.fa-icon,
+.favicons a.fa-icon {
+  display: inline-block;
+  font-size: 25px;
+  padding: 3px 5px;
+  color: #333;
+}
+
+@media screen and (max-width: 767px) { 
+    .navbar-collapse.collapse {
+      display: inline
+    }
+}
+
+/* ===[ Changes pagnination background color from blue to red ]=== */
+
+/* ===[ Adds margin to front page info panels ]=== */
+
+#block-panels-mini-front {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* ===[ Adds margin to bottom of container so that there is no overlap with footer ]=== */
+
+/* ***** footer elements *****
+   ================================================== */
+
+.footer {
+  background-color: #222;
+  margin-top: 0;
+  padding: 0;
+}
+
+footer h3,
+footer p,
+footer li {
+  color: #fff
+}
+
+footer h3 {
+  font-size: 1.35em;
+  font-family: 'sanchezregular',serif;
+}
+
+footer p,
+footer li {
+  font-size: .8em
+}
+
+footer a,
+footer a:visited,
+footer a:hover {
+  color: #fff
+}
+
+footer p {
+  text-align: center
+}
+
+footer p a:hover,
+footer li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer ul.about-list {
+  list-style-type: none;
+  border-left: 1px solid #fff;
+  line-height: 1.5em;
+  padding-left: .5em;
+}
+
+footer .niu-home {
+  position: relative;
+  top: -32px;
+}
+
+dl.islandora-metadata-fields {
+  width: 100%
+}
+
+dl.islandora-metadata-fields dt {
+  width: 30%;
+  padding: 5px;
+  margin: 0;
+  float: left;
+  clear: left;
+  font-weight: bold;
+}
+
+dl.islandora-metadata-fields dd {
+  width: 70%;
+  overflow: hidden;
+}
+
+div#BRinfo {
+  height: 620px
+}
+
+div#BRfulltext .BRfloat {
+  height: auto !important
+}
+
+.textTop {
+  font-size: 12px
+}
+
+@media (max-width:767px) { 
+    /* ===[ Start new Quick Links Mobile Menu ]=== */
+
+    .navbar-collapse.quicklinks {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    ul.quicklinks {
+      float: left;
+      border-top: 1px solid #fff;
+      padding: 0;
+      list-style-type: none;
+      border-top: 0px;
+      background-color: #C00;
+      margin: 0 1em 1em 0em;
+      width: 100%;
+    }
+
+    ul.quicklinks li {
+      color: #FFF;
+      padding: .25em;
+    }
+
+    ul.quicklinks ul {
+      float: left;
+      width: 50%;
+      list-style-type: none;
+      margin: 0em;
+      padding: 0em;
+    }
+
+    .quicklinks li a {
+      color: #FFF;
+      display: block;
+      text-align: left;
+      padding: .5em .5em;
+      margin: 0;
+      border: 1px solid #fff;
+      font-size: .85em;
+    }
+
+    /* ===[ End quicklinks mobile menu ]=== */
+
+    /* ***** global mobile nav elements *****
+       ================================================== */
+
+    ul.navbar-text.globalmobile {
+      list-style: none;
+      margin-top: 1em;
+      margin-right: 0em;
+      padding: 0px;
+    }
+
+    ul.navbar-text.globalmobile li {
+      font-size: .9em;
+      float: left;
+    }
+
+    ul.navbar-text.globalmobile li a {
+      color: #222;
+      padding-top: 5px;
+      padding-bottom: 1em;
+      padding-right: 11px;
+      padding-left: 5px;
+      text-align: center;
+    }
+
+    ul.navbar-text.globalmobile li.login a {
+      color: #cc0000;
+      font-size: .9em;
+    }
+
+    ul.navbar-text.globalmobile li.login ul.dropdown-menu {
+      position: absolute;
+      left: 0em;
+    }
+
+    ul.navbar-text.globalmobile li.login ul.dropdown-menu li a {
+      font-size: .95em;
+      padding: 1em;
+      display: block;
+      text-align: center;
+    }
+
+    ul.globalmobile {
+      list-style: none;
+      margin-top: 0em;
+      margin-right: 0em;
+      padding: 0px;
+    }
+
+    ul.globalmobile li {
+      font-size: 1em;
+      float: left;
+      margin: .5em 0em .5em 0em;
+    }
+
+    ul.globalmobile li a {
+      color: #222;
+      padding-right: .5em;
+      padding-left: .5em;
+      text-align: center;
+    }
+
+    ul.globalmobile {
+      display: table
+    }
+
+    /* * end globalmobile elements *
+       ================================================== */
+
+    .tb-megamenu .nav-collapse .nav > li > a,
+    .tb-megamenu .nav-collapse .dropdown-menu a {
+      border: 0
+    }
+
+    ul.tb-megamenu-nav {
+      display: inline
+    }
+
+    li.tb-megamenu-item.level-1 {
+      display: block
+    }
+
+    .tb-megamenu .nav-collapse.collapse.in {
+      position: static
+    }
+
+    .tb-megamenu-column-inner {
+      color: #333;
+      float: none;
+      width: auto;
+      margin-top: 0px;
+      color: #333;
+      background-color: #fff;
+      opacity: .95;
+      border: 0px none;
+      box-shadow: none;
+      padding-left: 2em;
+    }
+
+    .tb-megamenu .dropdown-menu .mega-nav > li > a {
+      color: #cc0000;
+      border: none;
+    }
+
+    .tb-megamenu .nav-collapse .nav > li.active > a:hover,
+    .tb-megamenu .nav-collapse .nav > li > a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+
+    li.tb-megamenu-item.level-1 {
+      text-align: -webkit-match-parent
+    }
+
+    .form-item {
+      float: left
+    }
+
+    .btn-primary {
+      margin-top: 6px;
+      float: right;
+    }
+
+    #collapse-search {
+      float: left;
+      margin-left: 1em;
+    }
+
+    footer.home {
+      background-color: #222;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+
+    footer {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+
+    footer ul.about-list {
+      list-style-type: none;
+      border-left: 0px solid #fff;
+      line-height: 1em;
+      padding-left: .5em;
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+
+    footer ul.about-list li a {
+      border: 1px solid #ddd;
+      margin: 1em 0;
+      padding: .5em;
+      display: block;
+    }
+
+    footer ul.about-list li a:hover,
+    footer ul.about-list li a:focus {
+      text-decoration: none;
+      background-color: #ededed;
+      color: #333;
+    }
+
+    footer .athletics {
+      position: relative;
+      top: 0px;
+      margin-bottom: 2em;
+    }
+
+    footer .social {
+      position: relative;
+      top: 0px;
+      margin-bottom: 2em;
+    }
+
+    footer .niu-home {
+      position: relative;
+      top: -32px;
+    }
+
+    .navbar.mobilenav {
+      background-color: #fff;
+      padding-left: 15px;
+      margin-bottom: 0px;
+    }
+
+    .navbar.mobilenav button {
+      /*float: right;*/
+    }
+
+    .navbar.mobilenav button.navbar-toggle {
+      height: 36px;
+      width: 44px;
+      border-color: #333;
+      background-color: #333;
+      color: #fff;
+      font-size: 1em;
+      margin-top: 3px;
+      margin-bottom: 3px;
+      margin-right: 1%;
+    }
+
+    .navbar.mobilenav .navbar-toggle .icon-bar {
+      background-color: #fff;
+      display: block;
+      width: 22px;
+      height: 2px;
+      border-radius: 1px;
+    }
+}
+
+.featured-collection-grid.clearfix {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  display: inline-block;
+}
+
+.featured-collection-grid-item {
+  display: inline
+}
+
+dl.collection {
+  width: 5%;
+  min-width: 80px;
+  min-height: 180px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 1.5em 1.84%;
+  zoom: 1;
+}
+
+#block-block-17 {
+  background-color: #e8e8e8;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 6px;
+  margin-top: 20px;
+  border: 1px solid #c8c8c8;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#block-block-17 h2 {
+  background-color: #e8e8e8;
+  color: #cc0000;
+}
+
+.navbar-toggle {
+  float: left;
+  margin-left: 1em;
+}
+
+ul.navbar-nav.global li ul.dropdown-menu.quicklinks {
+  background-color: #cc0000;
+  border-top: 1px solid #cc0000;
+  z-index: 10000;
+}
+
+ul.navbar-nav.global li ul.dropdown-menu.quicklinks li a {
+  color: #fff;
+  margin-right: 0em;
+}
+
+ul.navbar-nav.global li ul.dropdown-menu.quicklinks li a:hover {
+  background-color: #ffffff;
+  color: #cc0000;
+}
+
+@media (max-width: 1024px) { 
+    ul.navbar-nav.global {
+      font-size: 12px
+    }
+}
+
+@media (max-width: 768px) { 
+    ul.navbar-nav.global {
+      font-size: 10px
+    }
+
+    .tb-megamenu .nav > li > a {
+      color: #fff;
+      background-color: #0000;
+      font-size: 16px;
+      font-family: 'sanchezregular',serif;
+      font-weight: 700;
+      border: 0;
+      padding: 15px;
+    }
+
+    ul.mega-nav.level-1 > li:first-child:not(.no-head) > a {
+      color: #333
+    }
+
+    .tb-megamenu .dropdown-menu li > a {
+      color: #cc0000;
+      border: none;
+    }
+
+    .tb-megamenu .nav > .active > a,
+    .tb-megamenu .nav > .active > a:hover,
+    .tb-megamenu .nav > .active > a:focus {
+      background-color: #000
+    }
+
+    .tb-megamenu .nav > li > a:focus,
+    .tb-megamenu .nav > li > a:hover,
+    .tb-megamenu .nav li.dropdown.open > .dropdown-toggle,
+    .btn-link,
+    .pagination > li > a,
+    .pagination > li > a:hover {
+      color: #333
+    }
+
+    .tb-megamenu .dropdown-menu {
+      opacity: .9;
+      padding: 1em;
+      border: 0px;
+    }
+
+    .navbar-nav a {
+      color: #222
+    }
+
+    a.mega-group-title {
+      font-family: 'sanchezregular',serif;
+      text-transform: capitalize !important;
+      font-size: 1em;
+    }
+
+    .tb-megamenu .nav li.dropdown.active > .dropdown-toggle,
+    .tb-megamenu .nav li.dropdown.open.active > .dropdown-toggle {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .tb-megamenu .nav > li.dropdown.open.active > a:hover {
+      background-color: #fff;
+      color: #333;
+    }
+}
+
+@media (min-width: 375px) { 
+    ul.navbar-nav.global {
+      font-size: 1em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    ul.navbar-nav.global {
+      font-size: .75em;
+    }
+}
+
+@media (max-width: 320px) {
+  ul.col-xs-12.nav.nav-list.globalmobile {
+    font-size: .98em;
+  }
+}
+
+ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block !important
+}
+
+ul.nav li.dropdown ul.dropdown-menu {
+  margin-top: 0
+}
+
+/* Increase width and height of OpenSeadragon viewer */
+
+body.no-sidebars .islandora-large-image-content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+  .islandora-openseadragon {
+    height: 750px;
+  }
+}
+
+/* Fixes metadata display on mobile */
+
+dl.islandora-metadata-fields {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px;
+  margin: 0
+}
+dl.islandora-metadata-fields dt {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  margin: 0
+}
+dl.islandora-metadata-fields dd {
+  float: left;
+  width: 50%;
+  padding: 5px;
+  margin: 0
+}
+
+.addthis_toolbox a.at300b, .addthis_toolbox a.at300m {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* remove img-responsive styling when we don't need it
+div.service-links img, ul.islandora-solr-sort img {
+  display: inherit;
+  width: inherit;
+  height: inherit;
+}
+
+div.service-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.service-links li {
+  padding: 5px;
+}
+*/
+/* Properly align sort block */
+
+section#block-islandora-solr-sort {
+  float: right;
+  padding-top: 15px;
+  padding-right: 35px;
+}
+
+#block-islandora-solr-sort h2 {
+  display: inline;
+  font-size: 14px;
+  padding: 0;
+  border-bottom: none;
+}
+
+#block-islandora-solr-sort ul {
+  padding-left: 15px;
+  display: inline;
+}
+
+#block-islandora-solr-sort li{
+  display: inline;
+  padding-left: 15px;
+}
+
+/* Changes slider handles from img to Font Awesome */
+
+.islandora-solr-range-slider .ui-state-default:before, .islandora-solr-range-slider .ui-widget-content .ui-state-default:before, .islandora-solr-range-slider .ui-slider-handle:before {
+    content: "\f0de";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    font-size: 25px;
+}
+.islandora-solr-range-slider .ui-state-default, .islandora-solr-range-slider .ui-widget-content .ui-state-default, .islandora-solr-range-slider .ui-slider-handle {
+    background: top center no-repeat transparent;
+    border: 0px;
+    top: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Break really long words or URLs */
+.csl-bib-body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+height: 2px;
+    border: 0px;
+    background: #ccc;
+    margin-bottom: 25px;
